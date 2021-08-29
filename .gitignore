@@ -1,0 +1,11 @@
+venv
+.vscode
+__pycache__
+.aws
+pack
+dist
+config.py
+*.egg-info
+x
+.cache_dir
+*.REST
