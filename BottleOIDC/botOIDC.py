@@ -164,7 +164,7 @@ class BottleOIDC(OidcDiscover):
             self.logger.debug(f'OIDC: exchanging code {code[:10]}...{code[-10:]} for tokens')
             resp = req.post(self.token_url, data=params, timeout=self.timeout)
             tokens = resp.json()
-            print('****', tokens)
+            
             if 'error' in tokens:
                 msg = f'OIDC: error exchanging code for tokens: {tokens["error_description"]}'
                 self.logger.info(msg)
