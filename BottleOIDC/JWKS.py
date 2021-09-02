@@ -148,7 +148,7 @@ class   Jwks:
             return jwt.decode(token, options={'verify_signature': False, **kwargs})
 
         except Exception as e:
-            print(f'Error: decode_noverify: decode failed {str(e)}')
+            print(f'Error: decode_noverify: decode failed {str(e)}', file=sys.stderr)
             return None
 
 
